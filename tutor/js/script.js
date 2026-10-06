@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.addEventListener("click", function () {
     mobileMenu.classList.toggle("active");
   });
-});
+}); 
 
 // Change navbar background on scroll
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
-
+ console.log(window.scrollY)
   if (window.scrollY > 0) {
     navbar.classList.add("navbar-scroll");
   } else {
