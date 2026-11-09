@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student records</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="./index.html">Index page</a>
+    <main>
+      <h1>Student Records - Vanilla JavaScript</h1>
+      <form action="#" id="studentForm">
+        <label for=""
+          >Name <input type="text" id="name" required maxlength="80" />
+        </label>
+        <label for="">
+            Score <input type="number" id="score" min="0" max="100" required>
+        </label>
+        <button type="submit">Add student</button>
+      </form>
+      <p id="message" role="status"></p>
+      <label for="">
+        Search <input type="text" id="search" placeholder="Search by name">
+    </label>
+    <label for="">
+        Filter
+        <select  id="filter">
+            <option value="all">All</option>
+            <option value="pass">Passed</option>
+            <option value="fail">Failed</option>
+        </select>
+    </label>
+    <p id="stats"></p>
+    <ul id="students"></ul>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
