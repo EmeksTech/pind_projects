@@ -1,2 +1,3 @@
 ./tailwind/node_modules
 .DS_Store
+./react/my-app/node_modules

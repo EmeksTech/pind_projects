@@ -225,4 +225,101 @@ form.addEventListener("submit",
 
         form.reset();
 
-    } );
+    } 
+);
+
+function sayHello(name){
+    return `Hello ${name}`;
+}
+
+let message = sayHello;
+console.log(message);
+console.log(message("Emeka"));
+
+const sayHelloword = () =>  "Hello word!";
+
+
+console.log(sayHelloword());
+
+//const name = "John";
+const course = "React";
+
+//const myMessage = `Hello ${name}, welcome to ${course}`;
+
+//console.log(myMessage);
+
+//let studentName = student.name;
+//let studentAge = student.age;
+//object destructuring
+const { name, age} = student;
+
+console.log(name, age)
+
+//spread operator
+const numbers = [10, 20, 30];
+const newNumber = [ ...numbers, 40, 50]
+console.log (newNumber)
+
+const updatedStudent = {
+    ...student,
+    score: 95,
+    state: "Edo"
+};
+
+console.log(updatedStudent);
+
+//Asynchronous javascript
+console.log("1. Starting");
+setTimeout(() => {
+    console.log("2. Delayed task completed");
+}, 3000);
+
+console.log(("3. continuing execution"));
+
+//Promises and async/await
+
+function waitTwoSeconds() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Task completed");
+        }, 2000);
+    });
+}
+
+async function runTask() {
+    console.log("Please wait...");
+    const result = await waitTwoSeconds();
+    console.log(result);
+}
+
+runTask();
+
+console.log("this will run before async")
+
+//Api calls
+
+async function getUsers() {
+    try {
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users"
+        );
+
+        if (!response.ok){
+            throw new Error("Unable to fetch users");
+        }
+
+        const users = await response.json();
+        
+
+        users.forEach((user) => {
+            console.log(user.name, user.email);
+        });
+        console.log(users); 
+        return users;
+    } catch (error) {
+        console.error("Request failed:", error.message);
+    }
+
+}
+
+getUsers();

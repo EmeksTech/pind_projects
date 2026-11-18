@@ -88,3 +88,4 @@ filterInput.addEventListener("change",
     render
 );
 render();
+
